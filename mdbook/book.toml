@@ -1,0 +1,6 @@
+[book]
+authors = ["Rishav Singh", "Your Name"]
+language = "en"
+multilingual = false
+src = "src"
+title = "mdboot-title"
