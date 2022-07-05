@@ -76,7 +76,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="c++_syntax.html"><strong aria-hidden="true">1.</strong> C++ Syntax</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> Table of Content</a></li><li class="chapter-item expanded "><a href="c++_syntax.html"><strong aria-hidden="true">2.</strong> C++ Syntax</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -135,10 +135,786 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="c-syntax-cheat-sheet"><a class="header" href="#c-syntax-cheat-sheet">C++ Syntax Cheat Sheet</a></h1>
+                        <h1 id="c-data-structures-and-algorithms-cheat-sheet"><a class="header" href="#c-data-structures-and-algorithms-cheat-sheet">C++ Data Structures and Algorithms Cheat Sheet</a></h1>
+<h2 id="table-of-contents"><a class="header" href="#table-of-contents">Table of Contents</a></h2>
+<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+<ul>
+<li><a href="index.html#c-data-structures-and-algorithms-cheat-sheet">C++ Data Structures and Algorithms Cheat Sheet</a>
+<ul>
+<li><a href="index.html#table-of-contents">Table of Contents</a></li>
+<li><a href="index.html#10-data-structures">1.0 Data Structures</a>
+<ul>
+<li><a href="index.html#11-overview">1.1 Overview</a></li>
+<li><a href="index.html#12-vector-stdvector">1.2 Vector <code>std::vector</code></a></li>
+<li><a href="index.html#13-deque-stddeque">1.3 Deque <code>std::deque</code></a></li>
+<li><a href="index.html#14-list-stdlist-and-stdforward_list">1.4 List <code>std::list</code> and <code>std::forward_list</code></a></li>
+<li><a href="index.html#15-map-stdmap-and-stdunordered_map">1.5 Map <code>std::map</code> and <code>std::unordered_map</code></a></li>
+<li><a href="index.html#16-set-stdset">1.6 Set <code>std::set</code></a></li>
+<li><a href="index.html#17-stack-stdstack">1.7 Stack <code>std::stack</code></a></li>
+<li><a href="index.html#18-queue-stdqueue">1.8 Queue <code>std::queue</code></a></li>
+<li><a href="index.html#19-priority-queue-stdpriority_queue">1.9 Priority Queue <code>std::priority_queue</code></a></li>
+<li><a href="index.html#110-heap-stdpriority_queue">1.10 Heap <code>std::priority_queue</code></a></li>
+</ul>
+</li>
+<li><a href="index.html#20-trees">2.0 Trees</a>
+<ul>
+<li><a href="index.html#21-binary-tree">2.1 Binary Tree</a></li>
+<li><a href="index.html#22-balanced-trees">2.2 Balanced Trees</a></li>
+<li><a href="index.html#23-binary-search">2.3 Binary Search</a></li>
+<li><a href="index.html#24-depth-first-search">2.4 Depth-First Search</a></li>
+<li><a href="index.html#25-breadth-first-search">2.5 Breadth-First Search</a></li>
+</ul>
+</li>
+<li><a href="index.html#30-np-complete-problems">3.0 NP Complete Problems</a>
+<ul>
+<li><a href="index.html#31-np-complete">3.1 NP Complete</a></li>
+<li><a href="index.html#32-traveling-salesman-problem">3.2 Traveling Salesman Problem</a></li>
+<li><a href="index.html#33-knapsack-problem">3.3 Knapsack Problem</a></li>
+</ul>
+</li>
+<li><a href="index.html#40-algorithms">4.0 Algorithms</a>
+<ul>
+<li><a href="index.html#41-insertion-sort">4.1 Insertion Sort</a></li>
+<li><a href="index.html#42-selection-sort">4.2 Selection Sort</a></li>
+<li><a href="index.html#43-bubble-sort">4.3 Bubble Sort</a></li>
+<li><a href="index.html#44-merge-sort">4.4 Merge Sort</a></li>
+<li><a href="index.html#45-quicksort">4.5 Quicksort</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
+<h2 id="10-data-structures"><a class="header" href="#10-data-structures">1.0 Data Structures</a></h2>
+<h3 id="11-overview"><a class="header" href="#11-overview">1.1 Overview</a></h3>
+<p><img src="./images/Legend.png" alt="Legend" /></p>
+<p><img src="./images/Data%20Structures.png" alt="DataStructures" title="Data Structures" /></p>
+<p><img src="./images/Complexity%20Chart.png" alt="ComplexityChart" title="Complexity Chart" /></p>
+<h2 id=""><a class="header" href="#"><img src="./images/Data%20Structures%20Selection.png" alt="DataStructureSelection" title="Data Structures Selection" /></a></h2>
+<h3 id="12-vector-stdvector"><a class="header" href="#12-vector-stdvector">1.2 Vector <code>std::vector</code></a></h3>
+<p><strong>Use for</strong></p>
+<ul>
+<li>Simple storage</li>
+<li>Adding but not deleting</li>
+<li>Serialization</li>
+<li>Quick lookups by index</li>
+<li>Easy conversion to C-style arrays</li>
+<li>Efficient traversal (contiguous CPU caching)</li>
+</ul>
+<p><strong>Do not use for</strong></p>
+<ul>
+<li>Insertion/deletion in the middle of the list</li>
+<li>Dynamically changing storage</li>
+<li>Non-integer indexing</li>
+</ul>
+<p><strong>Time Complexity</strong></p>
+<table><thead><tr><th>Operation</th><th>Time Complexity</th></tr></thead><tbody>
+<tr><td>Insert Head</td><td><code>O(n)</code></td></tr>
+<tr><td>Insert Index</td><td><code>O(n)</code></td></tr>
+<tr><td>Insert Tail</td><td><code>O(1)</code></td></tr>
+<tr><td>Remove Head</td><td><code>O(n)</code></td></tr>
+<tr><td>Remove Index</td><td><code>O(n)</code></td></tr>
+<tr><td>Remove Tail</td><td><code>O(1)</code></td></tr>
+<tr><td>Find Index</td><td><code>O(1)</code></td></tr>
+<tr><td>Find Object</td><td><code>O(n)</code></td></tr>
+</tbody></table>
+<p><strong>Example Code</strong></p>
+<pre><code class="language-c++">std::vector&lt;int&gt; v;
+
+//---------------------------------
+// General Operations
+//---------------------------------
+
+// Size
+unsigned int size = v.size();
+
+// Insert head, index, tail
+v.insert(v.begin(), value);             // head
+v.insert(v.begin() + index, value);     // index
+v.push_back(value);                     // tail
+
+// Access head, index, tail
+int head = v.front();       // head
+head = v[0];                // or using array style indexing
+
+int value = v.at(index);    // index
+value = v[index];           // or using array style indexing
+
+int tail = v.back();        // tail
+tail = v[v.size() - 1];     // or using array style indexing
+
+// Iterate
+for(std::vector&lt;int&gt;::iterator it = v.begin(); it != v.end(); it++) {
+    std::cout &lt;&lt; *it &lt;&lt; std::endl;
+}
+
+// Remove head, index, tail
+v.erase(v.begin());             // head
+v.erase(v.begin() + index);     // index
+v.pop_back();                   // tail
+
+// Clear
+v.clear();
+</code></pre>
+<hr />
+<h3 id="13-deque-stddeque"><a class="header" href="#13-deque-stddeque">1.3 Deque <code>std::deque</code></a></h3>
+<p><strong>Use for</strong></p>
+<ul>
+<li>Similar purpose of <code>std::vector</code></li>
+<li>Basically <code>std::vector</code> with efficient <code>push_front</code> and <code>pop_front</code></li>
+</ul>
+<p><strong>Do not use for</strong></p>
+<ul>
+<li>C-style contiguous storage (not guaranteed)</li>
+</ul>
+<p><strong>Notes</strong></p>
+<ul>
+<li>Pronounced 'deck'</li>
+<li>Stands for <strong>D</strong>ouble <strong>E</strong>nded <strong>Que</strong>ue</li>
+</ul>
+<p><strong>Time Complexity</strong></p>
+<table><thead><tr><th>Operation</th><th>Time Complexity</th></tr></thead><tbody>
+<tr><td>Insert Head</td><td><code>O(1)</code></td></tr>
+<tr><td>Insert Index</td><td><code>O(n) or O(1)</code></td></tr>
+<tr><td>Insert Tail</td><td><code>O(1)</code></td></tr>
+<tr><td>Remove Head</td><td><code>O(1)</code></td></tr>
+<tr><td>Remove Index</td><td><code>O(n)</code></td></tr>
+<tr><td>Remove Tail</td><td><code>O(1)</code></td></tr>
+<tr><td>Find Index</td><td><code>O(1)</code></td></tr>
+<tr><td>Find Object</td><td><code>O(n)</code></td></tr>
+</tbody></table>
+<p><strong>Example Code</strong></p>
+<pre><code class="language-c++">std::deque&lt;int&gt; d;
+
+//---------------------------------
+// General Operations
+//---------------------------------
+
+// Insert head, index, tail
+d.push_front(value);                    // head
+d.insert(d.begin() + index, value);     // index
+d.push_back(value);                     // tail
+
+// Access head, index, tail
+int head = d.front();       // head
+int value = d.at(index);    // index
+int tail = d.back();        // tail
+
+// Size
+unsigned int size = d.size();
+
+// Iterate
+for(std::deque&lt;int&gt;::iterator it = d.begin(); it != d.end(); it++) {
+    std::cout &lt;&lt; *it &lt;&lt; std::endl;
+}
+
+// Remove head, index, tail
+d.pop_front();                  // head
+d.erase(d.begin() + index);     // index
+d.pop_back();                   // tail
+
+// Clear
+d.clear();
+</code></pre>
+<hr />
+<h3 id="14-list-stdlist-and-stdforward_list"><a class="header" href="#14-list-stdlist-and-stdforward_list">1.4 List <code>std::list</code> and <code>std::forward_list</code></a></h3>
+<p><strong>Use for</strong></p>
+<ul>
+<li>Insertion into the middle/beginning of the list</li>
+<li>Efficient sorting (pointer swap vs. copying)</li>
+</ul>
+<p><strong>Do not use for</strong></p>
+<ul>
+<li>Direct access</li>
+</ul>
+<p><strong>Time Complexity</strong></p>
+<table><thead><tr><th>Operation</th><th>Time Complexity</th></tr></thead><tbody>
+<tr><td>Insert Head</td><td><code>O(1)</code></td></tr>
+<tr><td>Insert Index</td><td><code>O(n)</code></td></tr>
+<tr><td>Insert Tail</td><td><code>O(1)</code></td></tr>
+<tr><td>Remove Head</td><td><code>O(1)</code></td></tr>
+<tr><td>Remove Index</td><td><code>O(n)</code></td></tr>
+<tr><td>Remove Tail</td><td><code>O(1)</code></td></tr>
+<tr><td>Find Index</td><td><code>O(n)</code></td></tr>
+<tr><td>Find Object</td><td><code>O(n)</code></td></tr>
+</tbody></table>
+<p><strong>Example Code</strong></p>
+<pre><code class="language-c++">std::list&lt;int&gt; l;
+
+//---------------------------------
+// General Operations
+//---------------------------------
+
+// Insert head, index, tail
+l.push_front(value);                    // head
+l.insert(l.begin() + index, value);     // index
+l.push_back(value);                     // tail
+
+// Access head, index, tail
+int head = l.front();                                           // head
+int value = std::next(l.begin(), index);		        // index
+int tail = l.back();                                            // tail
+
+// Size
+unsigned int size = l.size();
+
+// Iterate
+for(std::list&lt;int&gt;::iterator it = l.begin(); it != l.end(); it++) {
+    std::cout &lt;&lt; *it &lt;&lt; std::endl;
+}
+
+// Remove head, index, tail
+l.pop_front();                  // head
+l.erase(l.begin() + index);     // index
+l.pop_back();                   // tail
+
+// Clear
+l.clear();
+
+//---------------------------------
+// Container-Specific Operations
+//---------------------------------
+
+// Splice: Transfer elements from list to list
+//	splice(iterator pos, list &amp;x)
+//  	splice(iterator pos, list &amp;x, iterator i)
+//  	splice(iterator pos, list &amp;x, iterator first, iterator last)
+l.splice(l.begin() + index, list2);
+
+// Remove: Remove an element by value
+l.remove(value);
+
+// Unique: Remove duplicates
+l.unique();
+
+// Merge: Merge two sorted lists
+l.merge(list2);
+
+// Sort: Sort the list
+l.sort();
+
+// Reverse: Reverse the list order
+l.reverse();
+</code></pre>
+<hr />
+<h3 id="15-map-stdmap-and-stdunordered_map"><a class="header" href="#15-map-stdmap-and-stdunordered_map">1.5 Map <code>std::map</code> and <code>std::unordered_map</code></a></h3>
+<p><strong>Use for</strong></p>
+<ul>
+<li>Key-value pairs</li>
+<li>Constant lookups by key</li>
+<li>Searching if key/value exists</li>
+<li>Removing duplicates</li>
+<li><code>std::map</code>
+<ul>
+<li>Ordered map</li>
+</ul>
+</li>
+<li><code>std::unordered_map</code>
+<ul>
+<li>Hash table</li>
+</ul>
+</li>
+</ul>
+<p><strong>Do not use for</strong></p>
+<ul>
+<li>Sorting</li>
+</ul>
+<p><strong>Notes</strong></p>
+<ul>
+<li>Typically ordered maps (<code>std::map</code>) are slower than unordered maps (<code>std::unordered_map</code>)</li>
+<li>Maps are typically implemented as <em>binary search trees</em></li>
+</ul>
+<p><strong>Time Complexity</strong></p>
+<p><strong><code>std::map</code></strong></p>
+<table><thead><tr><th>Operation</th><th>Time Complexity</th></tr></thead><tbody>
+<tr><td>Insert</td><td><code>O(log(n))</code></td></tr>
+<tr><td>Access by Key</td><td><code>O(log(n))</code></td></tr>
+<tr><td>Remove by Key</td><td><code>O(log(n))</code></td></tr>
+<tr><td>Find/Remove Value</td><td><code>O(log(n))</code></td></tr>
+</tbody></table>
+<p><strong><code>std::unordered_map</code></strong></p>
+<table><thead><tr><th>Operation</th><th>Time Complexity</th></tr></thead><tbody>
+<tr><td>Insert</td><td><code>O(1)</code></td></tr>
+<tr><td>Access by Key</td><td><code>O(1)</code></td></tr>
+<tr><td>Remove by Key</td><td><code>O(1)</code></td></tr>
+<tr><td>Find/Remove Value</td><td>--</td></tr>
+</tbody></table>
+<p><strong>Example Code</strong></p>
+<pre><code class="language-c++">std::map&lt;std::string, std::string&gt; m;
+
+//---------------------------------
+// General Operations
+//---------------------------------
+
+// Insert
+m.insert(std::pair&lt;std::string, std::string&gt;(&quot;key&quot;, &quot;value&quot;));
+
+// Access by key
+std::string value = m.at(&quot;key&quot;);
+
+// Size
+unsigned int size = m.size();
+
+// Iterate
+for(std::map&lt;std::string, std::string&gt;::iterator it = m.begin(); it != m.end(); it++) {
+    std::cout &lt;&lt; *it &lt;&lt; std::endl;
+}
+
+// Remove by key
+m.erase(&quot;key&quot;);
+
+// Clear
+m.clear();
+
+//---------------------------------
+// Container-Specific Operations
+//---------------------------------
+
+// Find if an element exists by key
+bool exists = (m.find(&quot;key&quot;) != m.end());
+
+// Count the number of elements with a certain key
+unsigned int count = m.count(&quot;key&quot;);
+</code></pre>
+<hr />
+<h3 id="16-set-stdset"><a class="header" href="#16-set-stdset">1.6 Set <code>std::set</code></a></h3>
+<p><strong>Use for</strong></p>
+<ul>
+<li>Removing duplicates</li>
+<li>Ordered dynamic storage</li>
+</ul>
+<p><strong>Do not use for</strong></p>
+<ul>
+<li>Simple storage</li>
+<li>Direct access by index</li>
+</ul>
+<p><strong>Notes</strong></p>
+<ul>
+<li>Sets are often implemented with binary search trees</li>
+</ul>
+<p><strong>Time Complexity</strong></p>
+<table><thead><tr><th>Operation</th><th>Time Complexity</th></tr></thead><tbody>
+<tr><td>Insert</td><td><code>O(log(n))</code></td></tr>
+<tr><td>Remove</td><td><code>O(log(n))</code></td></tr>
+<tr><td>Find</td><td><code>O(log(n))</code></td></tr>
+</tbody></table>
+<p><strong>Example Code</strong></p>
+<pre><code class="language-c++">std::set&lt;int&gt; s;
+
+//---------------------------------
+// General Operations
+//---------------------------------
+
+// Insert
+s.insert(20);
+
+// Size
+unsigned int size = s.size();
+
+// Iterate
+for(std::set&lt;int&gt;::iterator it = s.begin(); it != s.end(); it++) {
+    std::cout &lt;&lt; *it &lt;&lt; std::endl;
+}
+
+// Remove
+s.erase(20);
+
+// Clear
+s.clear();
+
+//---------------------------------
+// Container-Specific Operations
+//---------------------------------
+
+// Find if an element exists
+bool exists = (s.find(20) != s.end());
+
+// Count the number of elements with a certain value
+unsigned int count = s.count(20);
+</code></pre>
+<hr />
+<h3 id="17-stack-stdstack"><a class="header" href="#17-stack-stdstack">1.7 Stack <code>std::stack</code></a></h3>
+<p><strong>Use for</strong></p>
+<ul>
+<li>First-In Last-Out operations</li>
+<li>Reversal of elements</li>
+</ul>
+<p><strong>Time Complexity</strong></p>
+<table><thead><tr><th>Operation</th><th>Time Complexity</th></tr></thead><tbody>
+<tr><td>Push</td><td><code>O(1)</code></td></tr>
+<tr><td>Pop</td><td><code>O(1)</code></td></tr>
+<tr><td>Top</td><td><code>O(1)</code></td></tr>
+</tbody></table>
+<p><strong>Example Code</strong></p>
+<pre><code class="language-c++">std::stack&lt;int&gt; s;
+
+//---------------------------------
+// Container-Specific Operations
+//---------------------------------
+
+// Push
+s.push(20);
+
+// Size
+unsigned int size = s.size();
+
+// Pop
+s.pop();
+
+// Top
+int top = s.top();
+</code></pre>
+<hr />
+<h3 id="18-queue-stdqueue"><a class="header" href="#18-queue-stdqueue">1.8 Queue <code>std::queue</code></a></h3>
+<p><strong>Use for</strong></p>
+<ul>
+<li>First-In First-Out operations</li>
+<li>Ex: Simple online ordering system (first come first served)</li>
+<li>Ex: Semaphore queue handling</li>
+<li>Ex: CPU scheduling (FCFS)</li>
+</ul>
+<p><strong>Notes</strong></p>
+<ul>
+<li>Often implemented as a <code>std::deque</code></li>
+</ul>
+<p><strong>Example Code</strong></p>
+<pre><code class="language-c++">std::queue&lt;int&gt; q;
+
+//---------------------------------
+// General Operations
+//---------------------------------
+
+// Insert
+q.push(value);
+
+// Access head, tail
+int head = q.front();       // head
+int tail = q.back();        // tail
+
+// Size
+unsigned int size = q.size();
+
+// Remove
+q.pop();
+</code></pre>
+<hr />
+<h3 id="19-priority-queue-stdpriority_queue"><a class="header" href="#19-priority-queue-stdpriority_queue">1.9 Priority Queue <code>std::priority_queue</code></a></h3>
+<p><strong>Use for</strong></p>
+<ul>
+<li>First-In First-Out operations where <strong>priority</strong> overrides arrival time</li>
+<li>Ex: CPU scheduling (smallest job first, system/user priority)</li>
+<li>Ex: Medical emergencies (gunshot wound vs. broken arm)</li>
+</ul>
+<p><strong>Notes</strong></p>
+<ul>
+<li>Often implemented as a <code>std::vector</code></li>
+</ul>
+<p><strong>Example Code</strong></p>
+<pre><code class="language-c++">std::priority_queue&lt;int&gt; p;
+
+//---------------------------------
+// General Operations
+//---------------------------------
+
+// Insert
+p.push(value);
+
+// Access
+int top = p.top();  // 'Top' element
+
+// Size
+unsigned int size = p.size();
+
+// Remove
+p.pop();
+</code></pre>
+<hr />
+<h3 id="110-heap-stdpriority_queue"><a class="header" href="#110-heap-stdpriority_queue">1.10 Heap <code>std::priority_queue</code></a></h3>
+<p><strong>Notes</strong></p>
+<ul>
+<li>A heap is essentially an instance of a priority queue</li>
+<li>A <strong>min</strong> heap is structured with the root node as the smallest and each child subsequently larger than its parent</li>
+<li>A <strong>max</strong> heap is structured with the root node as the largest and each child subsequently smaller than its parent</li>
+<li>A min heap could be used for <em>Smallest Job First</em> CPU Scheduling</li>
+<li>A max heap could be used for <em>Priority</em> CPU Scheduling</li>
+</ul>
+<p><strong>Max Heap Example (using a binary tree)</strong></p>
+<h2 id="-1"><a class="header" href="#-1"><img src="./images/MaxHeap.png" alt="MaxHeap" /></a></h2>
+<h2 id="20-trees"><a class="header" href="#20-trees">2.0 Trees</a></h2>
+<h3 id="21-binary-tree"><a class="header" href="#21-binary-tree">2.1 Binary Tree</a></h3>
+<ul>
+<li>A binary tree is a tree with at most two (2) child nodes per parent</li>
+<li>Binary trees are commonly used for implementing <code>O(log(n))</code> operations for ordered maps, sets, heaps, and binary search trees</li>
+<li>Binary trees are <strong>sorted</strong> in that nodes with values greater than their parents are inserted to the <strong>right</strong>, while nodes with values less than their parents are inserted to the <strong>left</strong></li>
+</ul>
+<p><strong>Binary Search Tree</strong></p>
+<h2 id="-2"><a class="header" href="#-2"><img src="./images/BinarySearchTree.png" alt="BinarySearchTree" /></a></h2>
+<h3 id="22-balanced-trees"><a class="header" href="#22-balanced-trees">2.2 Balanced Trees</a></h3>
+<ul>
+<li>Balanced trees are a special type of tree which maintains its balance to ensure <code>O(log(n))</code> operations</li>
+<li>When trees are not balanced the benefit of <code>log(n)</code> operations is lost due to the highly vertical structure</li>
+<li>Examples of balanced trees:
+<ul>
+<li>AVL Trees</li>
+<li>Red-Black Trees</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="23-binary-search"><a class="header" href="#23-binary-search">2.3 Binary Search</a></h3>
+<p><strong>Idea:</strong></p>
+<ol>
+<li>If current element, return</li>
+<li>If less than current element, look left</li>
+<li>If more than current element, look right</li>
+<li>Repeat</li>
+</ol>
+<p><strong>Data Structures:</strong></p>
+<ul>
+<li>Tree</li>
+<li>Sorted array</li>
+</ul>
+<p><strong>Space:</strong></p>
+<ul>
+<li><code>O(1)</code></li>
+</ul>
+<p><strong>Best Case:</strong></p>
+<ul>
+<li><code>O(1)</code></li>
+</ul>
+<p><strong>Worst Case:</strong></p>
+<ul>
+<li><code>O(log n)</code></li>
+</ul>
+<p><strong>Average:</strong></p>
+<ul>
+<li><code>O(log n)</code></li>
+</ul>
+<p><strong>Visualization:</strong></p>
+<h2 id="-3"><a class="header" href="#-3"><img src="Searching/Animations/Binary%20Search.gif" alt="BinarySearch" title="Binary Search" /></a></h2>
+<h3 id="24-depth-first-search"><a class="header" href="#24-depth-first-search">2.4 Depth-First Search</a></h3>
+<p><strong>Idea:</strong></p>
+<ol>
+<li>Start at root node</li>
+<li>Recursively search all adjacent nodes and mark them as searched</li>
+<li>Repeat</li>
+</ol>
+<p><strong>Data Structures:</strong></p>
+<ul>
+<li>Tree</li>
+<li>Graph</li>
+</ul>
+<p><strong>Space:</strong></p>
+<ul>
+<li><code>O(V)</code>, <code>V = number of verticies</code></li>
+</ul>
+<p><strong>Performance:</strong></p>
+<ul>
+<li><code>O(E)</code>, <code>E = number of edges</code></li>
+</ul>
+<p><strong>Visualization:</strong></p>
+<h2 id="-4"><a class="header" href="#-4"><img src="Searching/Animations/Depth-First%20Search.gif" alt="DepthFirstSearch" title="Depth-First Search" /></a></h2>
+<h3 id="25-breadth-first-search"><a class="header" href="#25-breadth-first-search">2.5 Breadth-First Search</a></h3>
+<p><strong>Idea:</strong></p>
+<ol>
+<li>Start at root node</li>
+<li>Search neighboring nodes first before moving on to next level</li>
+</ol>
+<p><strong>Data Structures:</strong></p>
+<ul>
+<li>Tree</li>
+<li>Graph</li>
+</ul>
+<p><strong>Space:</strong></p>
+<ul>
+<li><code>O(V)</code>, <code>V = number of verticies</code></li>
+</ul>
+<p><strong>Performance:</strong></p>
+<ul>
+<li><code>O(E)</code>, <code>E = number of edges</code></li>
+</ul>
+<p><strong>Visualization:</strong></p>
+<h2 id="-5"><a class="header" href="#-5"><img src="Searching/Animations/Breadth-First%20Search.gif" alt="DepthFirstSearch" title="Breadth-First Search" /></a></h2>
+<h2 id="30-np-complete-problems"><a class="header" href="#30-np-complete-problems">3.0 NP Complete Problems</a></h2>
+<h3 id="31-np-complete"><a class="header" href="#31-np-complete">3.1 NP Complete</a></h3>
+<ul>
+<li><strong>NP Complete</strong> means that a problem is unable to be solved in <strong>polynomial time</strong></li>
+<li>NP Complete problems can be <em>verified</em> in polynomial time, but not <em>solved</em></li>
+</ul>
+<hr />
+<h3 id="32-traveling-salesman-problem"><a class="header" href="#32-traveling-salesman-problem">3.2 Traveling Salesman Problem</a></h3>
+<hr />
+<h3 id="33-knapsack-problem"><a class="header" href="#33-knapsack-problem">3.3 Knapsack Problem</a></h3>
+<p><a href="NP-complete/knapsack/">Implementation</a></p>
+<hr />
+<h2 id="40-algorithms"><a class="header" href="#40-algorithms">4.0 Algorithms</a></h2>
+<h3 id="41-insertion-sort"><a class="header" href="#41-insertion-sort">4.1 Insertion Sort</a></h3>
+<h4 id="idea"><a class="header" href="#idea">Idea</a></h4>
+<ol>
+<li>Iterate over all elements</li>
+<li>For each element:
+<ul>
+<li>Check if element is larger than largest value in sorted array</li>
+</ul>
+</li>
+<li>If larger: Move on</li>
+<li>If smaller: Move item to correct position in sorted array</li>
+</ol>
+<h4 id="details"><a class="header" href="#details">Details</a></h4>
+<ul>
+<li><strong>Data structure:</strong> Array</li>
+<li><strong>Space:</strong> <code>O(1)</code></li>
+<li><strong>Best Case:</strong> Already sorted, <code>O(n)</code></li>
+<li><strong>Worst Case:</strong> Reverse sorted, <code>O(n^2)</code></li>
+<li><strong>Average:</strong> <code>O(n^2)</code></li>
+</ul>
+<h4 id="advantages"><a class="header" href="#advantages">Advantages</a></h4>
+<ul>
+<li>Easy to code</li>
+<li>Intuitive</li>
+<li>Better than selection sort and bubble sort for small data sets</li>
+<li>Can sort in-place</li>
+</ul>
+<h4 id="disadvantages"><a class="header" href="#disadvantages">Disadvantages</a></h4>
+<ul>
+<li>Very inefficient for large datasets</li>
+</ul>
+<h4 id="visualization"><a class="header" href="#visualization">Visualization</a></h4>
+<h2 id="-6"><a class="header" href="#-6"><img src="Sorting/Animations/Insertion%20Sort.gif" alt="InsertionSort" title="Insertion Sort" /></a></h2>
+<h3 id="42-selection-sort"><a class="header" href="#42-selection-sort">4.2 Selection Sort</a></h3>
+<h4 id="idea-1"><a class="header" href="#idea-1">Idea</a></h4>
+<ol>
+<li>Iterate over all elements</li>
+<li>For each element:
+<ul>
+<li>If smallest element of unsorted sublist, swap with left-most unsorted element</li>
+</ul>
+</li>
+</ol>
+<h4 id="details-1"><a class="header" href="#details-1">Details</a></h4>
+<ul>
+<li><strong>Data structure:</strong> Array</li>
+<li><strong>Space:</strong> <code>O(1)</code></li>
+<li><strong>Best Case:</strong> Already sorted, <code>O(n^2)</code></li>
+<li><strong>Worst Case:</strong> Reverse sorted, <code>O(n^2)</code></li>
+<li><strong>Average:</strong> <code>O(n^2)</code></li>
+</ul>
+<h4 id="advantages-1"><a class="header" href="#advantages-1">Advantages</a></h4>
+<ul>
+<li>Simple</li>
+<li>Can sort in-place</li>
+<li>Low memory usage for small datasets</li>
+</ul>
+<h4 id="disadvantages-1"><a class="header" href="#disadvantages-1">Disadvantages</a></h4>
+<ul>
+<li>Very inefficient for large datasets</li>
+</ul>
+<h4 id="visualization-1"><a class="header" href="#visualization-1">Visualization</a></h4>
+<p><img src="Sorting/Animations/Selection%20Sort.gif" alt="SelectionSort" title="Selection Sort" /></p>
+<h2 id="-7"><a class="header" href="#-7"><img src="Sorting/Animations/Selection%20Sort%202.gif" alt="SelectionSort" title="Selection Sort 2" /></a></h2>
+<h3 id="43-bubble-sort"><a class="header" href="#43-bubble-sort">4.3 Bubble Sort</a></h3>
+<h4 id="idea-2"><a class="header" href="#idea-2">Idea</a></h4>
+<ol>
+<li>Iterate over all elements</li>
+<li>For each element:
+<ul>
+<li>Swap with next element if out of order</li>
+</ul>
+</li>
+<li>Repeat until no swaps needed</li>
+</ol>
+<h4 id="details-2"><a class="header" href="#details-2">Details</a></h4>
+<ul>
+<li><strong>Data structure:</strong> Array</li>
+<li><strong>Space:</strong> <code>O(1)</code></li>
+<li><strong>Best Case:</strong> Already sorted <code>O(n)</code></li>
+<li><strong>Worst Case:</strong> Reverse sorted, <code>O(n^2)</code></li>
+<li><strong>Average:</strong> <code>O(n^2)</code></li>
+</ul>
+<h4 id="advantages-2"><a class="header" href="#advantages-2">Advantages</a></h4>
+<ul>
+<li>Easy to detect if list is sorted</li>
+</ul>
+<h4 id="disadvantages-2"><a class="header" href="#disadvantages-2">Disadvantages</a></h4>
+<ul>
+<li>Very inefficient for large datasets</li>
+<li>Much worse than even insertion sort</li>
+</ul>
+<h4 id="visualization-2"><a class="header" href="#visualization-2">Visualization</a></h4>
+<h2 id="-8"><a class="header" href="#-8"><img src="Sorting/Animations/Bubble%20Sort.gif" alt="BubbleSort" title="Bubble Sort" /></a></h2>
+<h3 id="44-merge-sort"><a class="header" href="#44-merge-sort">4.4 Merge Sort</a></h3>
+<h4 id="idea-3"><a class="header" href="#idea-3">Idea</a></h4>
+<ol>
+<li>Divide list into smallest unit (1 element)</li>
+<li>Compare each element with the adjacent list</li>
+<li>Merge the two adjacent lists</li>
+<li>Repeat</li>
+</ol>
+<h4 id="details-3"><a class="header" href="#details-3">Details</a></h4>
+<ul>
+<li><strong>Data structure:</strong> Array</li>
+<li><strong>Space:</strong> <code>O(n) auxiliary</code></li>
+<li><strong>Best Case:</strong> <code>O(nlog(n))</code></li>
+<li><strong>Worst Case:</strong> Reverse sorted, <code>O(nlog(n))</code></li>
+<li><strong>Average:</strong> <code>O(nlog(n))</code></li>
+</ul>
+<h4 id="advantages-3"><a class="header" href="#advantages-3">Advantages</a></h4>
+<ul>
+<li>High efficiency on large datasets</li>
+<li>Nearly always O(nlog(n))</li>
+<li>Can be parallelized</li>
+<li>Better space complexity than standard Quicksort</li>
+</ul>
+<h4 id="disadvantages-3"><a class="header" href="#disadvantages-3">Disadvantages</a></h4>
+<ul>
+<li>Still requires O(n) extra space</li>
+<li>Slightly worse than Quicksort in some instances</li>
+</ul>
+<h4 id="visualization-3"><a class="header" href="#visualization-3">Visualization</a></h4>
+<p><img src="Sorting/Animations/Merge%20Sort.gif" alt="MergeSort" title="Merge Sort" /></p>
+<h2 id="-9"><a class="header" href="#-9"><img src="Sorting/Animations/Merge%20Sort%202.gif" alt="MergeSort" title="Merge Sort 2" /></a></h2>
+<h3 id="45-quicksort"><a class="header" href="#45-quicksort">4.5 Quicksort</a></h3>
+<h4 id="idea-4"><a class="header" href="#idea-4">Idea</a></h4>
+<ol>
+<li>Choose a <strong>pivot</strong> from the array</li>
+<li>Partition: Reorder the array so that all elements with values <em>less</em> than the pivot come before the pivot, and all values <em>greater</em> than the pivot come after</li>
+<li>Recursively apply the above steps to the sub-arrays</li>
+</ol>
+<h4 id="details-4"><a class="header" href="#details-4">Details</a></h4>
+<ul>
+<li><strong>Data structure:</strong> Array</li>
+<li><strong>Space:</strong> <code>O(n)</code></li>
+<li><strong>Best Case:</strong> <code>O(nlog(n))</code></li>
+<li><strong>Worst Case:</strong> All elements equal, <code>O(n^2)</code></li>
+<li><strong>Average:</strong> <code>O(nlog(n))</code></li>
+</ul>
+<h4 id="advantages-4"><a class="header" href="#advantages-4">Advantages</a></h4>
+<ul>
+<li>Can be modified to use O(log(n)) space</li>
+<li>Very quick and efficient with large datasets</li>
+<li>Can be parallelized</li>
+<li>Divide and conquer algorithm</li>
+</ul>
+<h4 id="disadvantages-4"><a class="header" href="#disadvantages-4">Disadvantages</a></h4>
+<ul>
+<li>Not stable (could swap equal elements)</li>
+<li>Worst case is worse than Merge Sort</li>
+</ul>
+<h4 id="optimizations"><a class="header" href="#optimizations">Optimizations</a></h4>
+<ul>
+<li>Choice of pivot:
+<ul>
+<li>Choose median of the first, middle, and last elements as pivot</li>
+<li>Counters worst-case complexity for already-sorted and reverse-sorted</li>
+</ul>
+</li>
+</ul>
+<h4 id="visualization-4"><a class="header" href="#visualization-4">Visualization</a></h4>
+<p><img src="Sorting/Animations/Quicksort.gif" alt="QuickSort" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="c-syntax-cheat-sheet"><a class="header" href="#c-syntax-cheat-sheet">C++ Syntax Cheat Sheet</a></h1>
 <h2 id="preface"><a class="header" href="#preface">Preface</a></h2>
 <p>Since the C++ language varies so heavily between versions (e.g. C++0x, C++11, C++17, etc.), I will preface this cheat sheet by saying that the majority of the examples here target C++0x or c++11, as those are the versions that I am most familiar with. I come from the aerospace industry (embedded flight software) in which we purposefully don't use the latest technologies for safety reasons, so most of the code I write is in C++0x and sometimes C++11. Nevertheless, the basic concepts of C++ and object oriented programming still generally apply to both past and future versions of the language.</p>
-<h2 id="table-of-contents"><a class="header" href="#table-of-contents">Table of Contents</a></h2>
+<h2 id="table-of-contents-1"><a class="header" href="#table-of-contents-1">Table of Contents</a></h2>
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:0 orderedList:0 -->
 <ul>
 <li><a href="c++_syntax.html#c-syntax-cheat-sheet">C++ Syntax Cheat Sheet</a>
