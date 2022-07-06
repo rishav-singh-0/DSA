@@ -540,7 +540,7 @@ p.pop();
 
 **Visualization:**
 
-![BinarySearch](Searching/Animations/Binary%20Search.gif "Binary Search")
+![BinarySearch](./images/Searching/Animations/Binary%20Search.gif "Binary Search")
 -------------------------------------------------------
 ### 2.4 Depth-First Search
 **Idea:**
@@ -560,7 +560,7 @@ p.pop();
 
 **Visualization:**
 
-![DepthFirstSearch](Searching/Animations/Depth-First%20Search.gif "Depth-First Search")
+![DepthFirstSearch](./images/Searching/Animations/Depth-First%20Search.gif "Depth-First Search")
 -------------------------------------------------------
 ### 2.5 Breadth-First Search
 **Idea:**
@@ -579,7 +579,7 @@ p.pop();
 
 **Visualization:**
 
-![DepthFirstSearch](Searching/Animations/Breadth-First%20Search.gif "Breadth-First Search")
+![DepthFirstSearch](./images/Searching/Animations/Breadth-First%20Search.gif "Breadth-First Search")
 -------------------------------------------------------
 ## 3.0 NP Complete Problems
 ### 3.1 NP Complete
@@ -623,7 +623,7 @@ p.pop();
 
 #### Visualization
 
-![InsertionSort](Sorting/Animations/Insertion%20Sort.gif "Insertion Sort")
+![InsertionSort](./images/Sorting/Animations/Insertion%20Sort.gif "Insertion Sort")
 -------------------------------------------------------
 ### 4.2 Selection Sort
 #### Idea
@@ -648,9 +648,9 @@ p.pop();
 
 #### Visualization
 
-![SelectionSort](Sorting/Animations/Selection%20Sort.gif "Selection Sort")
+![SelectionSort](./images/Sorting/Animations/Selection%20Sort.gif "Selection Sort")
 
-![SelectionSort](Sorting/Animations/Selection%20Sort%202.gif "Selection Sort 2")
+![SelectionSort](./images/Sorting/Animations/Selection%20Sort%202.gif "Selection Sort 2")
 -------------------------------------------------------
 ### 4.3 Bubble Sort
 #### Idea
@@ -675,7 +675,7 @@ p.pop();
 
 #### Visualization
 
-![BubbleSort](Sorting/Animations/Bubble%20Sort.gif "Bubble Sort")
+![BubbleSort](./images/Sorting/Animations/Bubble%20Sort.gif "Bubble Sort")
 -------------------------------------------------------
 ### 4.4 Merge Sort
 #### Idea
@@ -703,9 +703,9 @@ p.pop();
 
 #### Visualization
 
-![MergeSort](Sorting/Animations/Merge%20Sort.gif "Merge Sort")
+![MergeSort](./images/Sorting/Animations/Merge%20Sort.gif "Merge Sort")
 
-![MergeSort](Sorting/Animations/Merge%20Sort%202.gif "Merge Sort 2")
+![MergeSort](./images/Sorting/Animations/Merge%20Sort%202.gif "Merge Sort 2")
 -------------------------------------------------------
 ### 4.5 Quicksort
 #### Idea
@@ -737,4 +737,4 @@ p.pop();
 
 #### Visualization
 
-![QuickSort](Sorting/Animations/Quicksort.gif)
+![QuickSort](./images/Sorting/Animations/Quicksort.gif)
