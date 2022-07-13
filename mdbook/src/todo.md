@@ -24,7 +24,7 @@
 - [ ] Binary Search On Matrix
 
 # Linked Lists
-- [ ] Reversal Problems
+- [x] Reversal Problems
 - [ ] Sorting Problems
 - [ ] Slow And Fast Pointers
 - [ ] Modify In Linked list
