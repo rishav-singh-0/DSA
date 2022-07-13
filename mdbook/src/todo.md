@@ -74,6 +74,8 @@
 - [ ] Bit Manipulation
 - [ ] Greedy
 - [ ] Circular Queues
-- [ ] Deques - [ ] Hot Topic
+- [ ] Deques 
+
+# Hot Topic
 - [ ] Doubly And Circular LL
 - [ ] String Algorithms like KMP and Z Algorithm
